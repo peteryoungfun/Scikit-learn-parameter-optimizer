@@ -47,7 +47,7 @@ def opt_without_label(func,c_list,i_list,label,alpha,max_iter,min_improve):
         return ("No parameter input")
     
     #if there's only label inputs, we only calculate once
-    elif len(label)!=0:
+    elif len(label)!=0 and len(c_list)+len(i_list)==0:
         return [[label,func(**label)],1]
     
     ##if there's continous or int input, algorithm will start
